@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<!--disable missing comment warning-->
+	<NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Soccer.Application\Soccer.Application.csproj" />
+    <ProjectReference Include="..\Soccer.Notification.Email\Soccer.Notification.Email.csproj" />
+    <ProjectReference Include="..\Soccer.Persistence.InMemory\Soccer.Persistence.InMemory.csproj" />
+  </ItemGroup>
+
+</Project>
